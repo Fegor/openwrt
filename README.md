@@ -25,8 +25,16 @@ sudo apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git
 
 7. 上面的目的是获得一个.config文件，里面可以包含ssr和passwall。文件路径是C:\Users\用户名\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu20.04onWindows_79rhkp1fndgsc\LocalState\rootfs\home\用户名\op19
 
-8. 到https://p3terx.com/archives/build-openwrt-with-github-actions.html
+8. 编辑workflow文件为lienol的源
+REPO_URL: https://github.com/Lienol/openwrt
+REPO_BRANCH: dev-19.07
+（以Lienol OpenWrt源码为例分支dev-master 激进；dev-19.07 OpenWrt官方平稳版；dev-lean-lede lean的源码）。
+
+9. 到https://p3terx.com/archives/build-openwrt-with-github-actions.html
 （参考https://mianao.info/2020/05/05/%E7%BC%96%E8%AF%91%E6%9B%B4%E6%96%B0OpenWrt-PassWall%E5%92%8CSSR-plus%E6%8F%92%E4%BB%B6）
+上传.config文件即开始编译，去actions里面查看进度。
+
+
 
 //6. 输入 `make -j1 V=s` （-j1 后面是线程数。第一次编译推荐用单线程）即可开始编译你要的固件了。
 
