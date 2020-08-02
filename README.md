@@ -23,9 +23,9 @@ sudo apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git
 
 //7. `make -j8 download V=s` 下载dl库（国内请尽量全局科学上网）
 
-7. 上面的目的是获得一个.config文件，里面可以包含ssr和passwall。
+7. 上面的目的是获得一个.config文件，里面可以包含ssr和passwall。文件路径是C:\Users\用户名\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu20.04onWindows_79rhkp1fndgsc\LocalState\rootfs\home\用户名\op19
 
-8. 到https://p3terx.com/archives/build-openwrt-with-github-actions.html，这个在线编译里。
+8. 到https://p3terx.com/archives/build-openwrt-with-github-actions.html
 （参考https://mianao.info/2020/05/05/%E7%BC%96%E8%AF%91%E6%9B%B4%E6%96%B0OpenWrt-PassWall%E5%92%8CSSR-plus%E6%8F%92%E4%BB%B6）
 
 //6. 输入 `make -j1 V=s` （-j1 后面是线程数。第一次编译推荐用单线程）即可开始编译你要的固件了。
