@@ -8,6 +8,8 @@ sudo apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git
 `
 
 3. `git clone -b dev-19.07 https://github.com/Lienol/openwrt op19` 命令下载好源代码，然后 `cd op19` 进入目录
+cd openwrt/package
+git clone https://github.com/kenzok8/openwrt-packages.git
 
 4. ```bash
    ./scripts/feeds clean
