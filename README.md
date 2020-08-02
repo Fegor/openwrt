@@ -8,19 +8,22 @@ sudo apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git
 `
 
 3. `git clone -b dev-19.07 https://github.com/Lienol/openwrt op19` 命令下载好源代码，然后 `cd op19` 进入目录
-cd openwrt/package
-git clone https://github.com/kenzok8/openwrt-packages.git
 
-4. ```bash
+4. 修改feeds.conf.default 文件，命令是vi feeds.conf.default 
+5. 添加src-git kenzo https://github.com/kenzok8/openwrt-packages
+       src-git small https://github.com/kenzok8/small
+       
+
+6. ```bash
    ./scripts/feeds clean
    ./scripts/feeds update -a
    ./scripts/feeds install -a
    make menuconfig
    ```
 
-5. `make -j8 download V=s` 下载dl库（国内请尽量全局科学上网）
+7. `make -j8 download V=s` 下载dl库（国内请尽量全局科学上网）
 
-6. 上面的目的是获得一个.config文件，里面可以包含ssr和passwall。
+8. 上面的目的是获得一个.config文件，里面可以包含ssr和passwall。
 
 7. 到https://p3terx.com/archives/build-openwrt-with-github-actions.html，这个在线编译里。（参考https://mianao.info/2020/05/05/%E7%BC%96%E8%AF%91%E6%9B%B4%E6%96%B0OpenWrt-PassWall%E5%92%8CSSR-plus%E6%8F%92%E4%BB%B6）
 
