@@ -1,8 +1,8 @@
 编译命令如下:
 -
-1. 首先装好 Ubuntu 64bit，推荐  Ubuntu  18 LTS x64
+1. 首先装好 Ubuntu 64bit，推荐  Ubuntu  18 LTS x64，打开控制面板-程序-启动或关闭windows程序-拉到最下面-选中适用于Linux的windows子系统，然后重启，再到windows store里搜索unbuntu，安装ubuntu18.
 
-2. 命令行输入 `sudo apt-get update` ，然后输入
+2. 打开ubuntu，可能会要求设置新的用户名和密码，设置即可。然后启动， 命令行输入 `sudo apt-get update` ，然后输入
 `
 sudo apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git libncurses5-dev libz-dev patch python3.5 python2.7 unzip zlib1g-dev lib32gcc1 libc6-dev-i386 subversion flex uglifyjs git-core gcc-multilib p7zip p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint device-tree-compiler g++-multilib antlr3 gperf
 `
@@ -18,10 +18,13 @@ sudo apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git
 
 5. `make -j8 download V=s` 下载dl库（国内请尽量全局科学上网）
 
+6. 上面的目的是获得一个.config文件，里面可以包含ssr和passwall。
 
-6. 输入 `make -j1 V=s` （-j1 后面是线程数。第一次编译推荐用单线程）即可开始编译你要的固件了。
+7. 到https://p3terx.com/archives/build-openwrt-with-github-actions.html，这个在线编译里。（参考https://mianao.info/2020/05/05/%E7%BC%96%E8%AF%91%E6%9B%B4%E6%96%B0OpenWrt-PassWall%E5%92%8CSSR-plus%E6%8F%92%E4%BB%B6）
 
-6. 编译完成后输出路径：op-19/bin/targets
+//6. 输入 `make -j1 V=s` （-j1 后面是线程数。第一次编译推荐用单线程）即可开始编译你要的固件了。
+
+//6. 编译完成后输出路径：op-19/bin/targets
 
 你可以自由使用，但源码编译二次发布请注明我的 GitHub 仓库链接。谢谢合作！
  
