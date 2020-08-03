@@ -9,9 +9,8 @@ sudo apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git
 
 3. `git clone -b dev-19.07 https://github.com/Lienol/openwrt op19` 命令下载好源代码，然后 `cd op19` 进入目录
 
-4. 修改feeds.conf.default 文件，命令是vi feeds.conf.default 
-5. 添加src-git kenzo https://github.com/kenzok8/openwrt-packages
-       src-git small https://github.com/kenzok8/small
+4. `cd package`
+   `git clone https://github.com/kenzok8/openwrt-packages.git`
        
 
 6. ```bash
