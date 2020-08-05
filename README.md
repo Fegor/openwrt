@@ -1,11 +1,10 @@
 编译命令如下:
 -
-1. 首先装好 Ubuntu 64bit，推荐  Ubuntu  18 LTS x64，打开控制面板-程序-启动或关闭windows程序-拉到最下面-选中适用于Linux的windows子系统，然后重启，再到windows store里搜索unbuntu，安装ubuntu18.
+1. 首先装好 Ubuntu 64bit，推荐  Ubuntu  18 LTS x64，打开控制面板-程序-启动或关闭windows程序-拉到最下面-选中适用于Linux的windows子系统，然后重启，再到windows store里搜索unbuntu，安装ubuntu20.
 
 2. 打开ubuntu，可能会要求设置新的用户名和密码，设置即可。然后启动， 命令行输入 `sudo apt-get update` ，然后输入
-`
-sudo apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git libncurses5-dev libz-dev patch python3.5 python2.7 unzip zlib1g-dev lib32gcc1 libc6-dev-i386 subversion flex uglifyjs git-core gcc-multilib p7zip p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint device-tree-compiler g++-multilib antlr3 gperf
-`
+`sudo apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git libncurses5-dev libz-dev patch python3.5 python2.7 unzip zlib1g-dev lib32gcc1 libc6-dev-i386 subversion flex uglifyjs git-core gcc-multilib p7zip p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint device-tree-compiler g++-multilib antlr3 gperf`
+
 设置本地代理，不然clone的速度巨慢。
 `git config --global http.proxy http://127.0.0.1:10809`
 `git config --global https.proxy https://127.0.0.1:10809`
@@ -23,18 +22,19 @@ sudo apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git
    make menuconfig
    ```
 
-//7. `make -j8 download V=s` 下载dl库（国内请尽量全局科学上网）
+7. `make -j8 download V=s` 下载dl库（国内请尽量全局科学上网）
 
-7. 上面的目的是获得一个.config文件，里面可以包含ssr和passwall。文件路径是C:\Users\用户名\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu20.04onWindows_79rhkp1fndgsc\LocalState\rootfs\home\用户名\op19
+8. 上面的目的是获得一个.config文件，里面可以包含ssr和passwall。文件路径是C:\Users\用户名\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu20.04onWindows_79rhkp1fndgsc\LocalState\rootfs\home\用户名\op19
 
-8. 编辑workflow文件为lienol的源
+9. 编辑workflow文件为lienol的源
 REPO_URL: https://github.com/Lienol/openwrt
 REPO_BRANCH: dev-19.07
 （以Lienol OpenWrt源码为例分支dev-master 激进；dev-19.07 OpenWrt官方平稳版；dev-lean-lede lean的源码）。
 
-9. 到https://p3terx.com/archives/build-openwrt-with-github-actions.html
-（参考https://mianao.info/2020/05/05/%E7%BC%96%E8%AF%91%E6%9B%B4%E6%96%B0OpenWrt-PassWall%E5%92%8CSSR-plus%E6%8F%92%E4%BB%B6）
-上传.config文件即开始编译，去actions里面查看进度。
+9. 上传.config文件即开始编译，去actions里面查看进度。
+（到https://p3terx.com/archives/build-openwrt-with-github-actions.html
+参考https://mianao.info/2020/05/05/%E7%BC%96%E8%AF%91%E6%9B%B4%E6%96%B0OpenWrt-PassWall%E5%92%8CSSR-plus%E6%8F%92%E4%BB%B6）
+
 
 
 
